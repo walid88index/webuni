@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\Navar.css">
+    <link rel="stylesheet" href="css\Footer.css">
+    <title>M.A.W/Order</title>
+    <style>
+        body{display: flex;
+        flex-direction: column;
+    text-align: center;
+align-items: center;
+      background:url("media/Cat_laptop.jpg") no-repeat center center/ cover;
+  background-size: 100% 100%;}
+
+        form{display: flex;
+        flex-direction: column;
+    gap: 100px;
+        text-align: center;
+      align-items: center;
+margin-bottom: 50px;
+width: 80%;
+padding: 5px;
+color: rgb(0, 255, 0);
+background-color: rgba(0, 34, 255, 0.6);
+border:10px double rgba(0, 34, 255, 0.6);
+border-radius:20%;}
+
+form a{color: rgb(0, 255, 0);}
+
+    label{display: flex;
+        flex-direction: column;
+        text-align: center;
+      align-items: center;}
+
+      input, button{width: 60vw;
+    max-width: 500px;}
+
+        label label{display: block;}
+        label label input{width: auto;}
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <figure>
+           <a href="index.html"><img src="media\logo.jpg" alt="M.A.W logo"></a>
+          </figure>
+    
+        <ul>
+        <li><a href="AboutUs.html">About us</a></li>
+        
+        <li><a href="WebsitesCatalog.html">Websites catalog</a></li>
+        
+        <li><a href="Reviews.html">Reviews</a></li>
+    
+        <li><a href="ContactUs.html">Contact us</a></li>
+
+        <li><a href="Calculator.html">Calculator</a></li>
+    
+        <li><a href="SiteMap.html">Sitmap</a></li>
+      </ul>   
+      </nav>
+    <header style="padding: 150px 5px 75px 5px;">
+        <h1>Web designing</h1>
+        <p>Please fill the below information as much as possible before sending it</p>
+    </header>
+
+    <form action="https://formsubmit.co/ahmad.mamoun.dawoud@gmail.com" method="POST" id="survey-form">
+
+        <input type="hidden" name="_subject" value="Web Design Request">
+
+        <label for="name">Name:
+     <input type="text" name="name" placeholder="Enter your fill name(required)" required></label>
+
+     <label for="email">Email:
+     <input type="email" name="email" placeholder="Enter your email(required)" required></label>
+
+     <label for="phone">Phone number:
+  <input type="tel" name="phone" placeholder="Enter phone number" pattern="[0-9]{2-4}[0-9]{3}[0-9]{3}[0-9]{2}"></label>
+
+     <label for="number">Pages number:
+     <input name="Pages" placeholder="Enter how many pages(at lest 3)" min="3" max="1000000"></label>
+
+     <label for="Wepsite_category">Wepsite category:
+    <select name="Wepsite_category">
+    <option disabled selected>Selecte a category</option>
+    <option value="ECommerce">ECommerce</option>
+    <option value="Business">Business</option>
+    <option value="Event">Event</option>
+    <option value="Personal">Personal</option>
+    <option value="Informational">Informational</option>
+    <option value="Community">Community</option>
+    <option value="Booking">Booking</option>
+    <option value="School">School</option>
+    <option value="Entertainment">Entertainment</option>
+    <option value="Memorial">Memorial</option>
+    <option value="Other">Other</option>
+   </select></label>
+
+   <label for="pages_characteristics">pages characteristics:
+   <label for="ch1">
+   <input id="ch1" name="pages_characteristics" type="checkbox" value="Interactive ">Interactive: <a href="https://www.nedavius.com/process-v7">exampel</a></label>
+   <label for="ch2">
+    <input id="ch2" name="pages_characteristics" type="checkbox" value="Subscription ">Subscription: <a href="https://www.javaboynation.com/">exampel</a></label>
+    <label for="ch3">
+     <input id="ch3" name="pages_characteristics" type="checkbox" value="Kid-friendly">Kid-friendly: <a href="https://lukieelou.com/collections/play">exampel</a></label>
+     <label for="ch4">
+        <input id="ch4" name="pages_characteristics" type="checkbox" value="Other">Other</label></label>
+
+        <label for="Dominant_color">Dominant color:
+        <input name="Dominant_color" type="color"></label>
+
+        <label for="exampel">Exampel:
+            <input name="exampel" type="file" style="width: auto;"></label>
+
+        <label for="date">Delivery date:
+    <input name="Delivery_date" type="date" id="date"></label>
+
+    <label for="Contact_schedule">Contact schedule:
+    <select name="Contact_schedule">
+    <option disabled selected>Selecte a schedule</option>
+    <optgroup label="Small wepsite">
+    <option value="end start">In the start and the End</option>
+    <option value="3 days">every 3 days and in the start and the End</option>
+    </optgroup>
+    <optgroup label="Big wepsite">
+    <option value="week">Every week and in the start and the End</option>
+    <option value="month">Every month and in the start and the End</option>
+   </optgroup>
+   </select></label>
+
+   <label for="Communication_method">Communication method:
+  <label for="email"><input id="email" name="Communication_method" type="radio" value="email">Only through email</label>
+   <label for="text"><input id="text" name="Communication_method" type="radio" value="text">Only through text</label>
+   <label for="any"><input id="any" name="Communication_method" type="radio" value="any" checked>Anyway</label></label>
+
+   <label for="notes">Notes:
+   <textarea name="notes" placeholder="Enter any notes"></textarea></label>
+
+   <button type="submit">Send order</button>
+
+    </form>
+    <footer style="width: 100%;">
+        <p>&copy; 2023 M.A.W . All rights reserved. | <a href="#">Privacy Policy</a> | <a
+                href="#">Terms of Service</a></p>
+    </footer>
+</body>
+</html>

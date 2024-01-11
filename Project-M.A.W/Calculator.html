@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>M.A.W/Calculator</title>
+    <link rel="stylesheet" href="css\Navar.css">
+    <link rel="stylesheet" href="css\Footer.css">
+    <style>
+        body{background-color: aqua;
+        min-height: 110vh;}
+
+        #date{text-align: center;
+        padding-top:130px ;}
+        form{
+            margin: 0 auto;
+            width: 90%;
+            background-color: aliceblue;
+        }
+        #tex{border: 5px solid blue;
+        width: 200px;
+    height: 200px;
+padding: 5px;}
+nav{margin-top: -22px;}
+footer{margin: 50px -8px -5px -8px;}
+#pa{width: 79%;
+text-align: center;
+margin: auto;}
+
+    </style>
+    
+    
+</head>
+<body>
+    <nav>
+        <figure>
+            <a href="index.html"><img src="media\logo.jpg" alt="M.A.W logo"></a>
+          </figure>
+    
+        <ul>
+        <li><a href="#">About us</a></li>
+        
+        <li><a href="WebsitesCatalog.html">Websites catalog</a></li>
+        
+        <li><a href="Reviews.html">Reviews</a></li>
+    
+        <li><a href="ContactUs.html">Contact us</a></li>
+
+        <li><a href="#">Calculator</a></li>
+    
+        <li><a href="SiteMap.html">Sitemap</a></li>
+      </ul>   
+      </nav>
+     
+    <h1 id="date"></h1>
+    <div id="pa" style="border: double black;"> Dear valued customers, to ensure a seamless experience and accurate order processing, we kindly request you to complete the form by providing your name, specifying the number of pages you wish to order, and detailing the purpose of your request. Your input is crucial in tailoring our services to meet your unique requirements. Thank you for your cooperation in making this process efficient and effective. </div>
+    <form onsubmit="return fun()">
+        <fieldset>
+               <label> <b> Name </b> <input type="text" id="name"></label> <span style="color: red;" id="err1"></span> <br><br>
+             <label> <b> How many pages ? </b> <input type="text" id="page"></label> <span style="color: red;" id="err2"></span> <br><br>
+             <label for="ss"> <b>Website type : </b> <input type="radio" name="ss" value="Educational" > Educational
+               <input type="radio"  name="ss" value="Media"> Media 
+               <input type="radio" name="ss" value="Entertainment">Entertainment 
+               <input type="radio" name="ss" value="News">News 
+               <input type="radio" name="ss" value="Business">Business  </label><span style="color: red;" id="err3"></span> <br><br>
+               <input type="button" value="Calculate" onclick="fun()"> <br><br><br>
+               <div id="tex"></div>
+
+        </fieldset>
+    </form>
+    <footer>
+        <p>&copy; 2023 M.A.W . All rights reserved. | <a href="#">Privacy Policy</a> | <a
+                href="#">Terms of Service</a></p>
+    </footer>
+    
+</body>
+<script>
+    function ClockSession(){
+     var d = new Date();
+    document.getElementById("date").innerHTML = d.toLocaleString();
+    }
+    window.setInterval(ClockSession,1000);
+</script>
+<script>
+    function fun(){
+        var rad = document.getElementsByName('ss');
+        var x = document.getElementById("name").value;
+        var y = document.getElementById("page").value;
+        var z = y*20;
+        var n = y*2;
+        var swch1 = false;
+        var swch2 = true;
+        var swch3 = true;
+        for(var i = 0; i < rad.length;i++){
+            if(rad[i].checked){var hrad = rad[i];document.getElementById("err3").innerHTML="";
+            swch1 = true;}
+        }
+        if(!swch1){document.getElementById("err3").innerHTML=" chose 1 ";swch1 = false;}
+
+        if(x==""){
+            document.getElementById("err1").innerHTML="Enter a name";swch2 = false;
+        }else{document.getElementById("err1").innerHTML="";swch2 = true;}
+
+        if(y<1){
+        document.getElementById("err2").innerHTML="incorrect number";swch3 = false;
+        }else{document.getElementById("err2").innerHTML="";swch3 = true;}
+        
+        if(swch1&&swch2&&swch3){ 
+        document.getElementById("tex").innerHTML=" <h1> Name : </h1><p> "+x+' <br> '
+        +"Cost :"+z +"<br> Needed Time :"+n+" days "+hrad.value+"</p>";
+        document.getElementById("err2").innerHTML=" ";
+        document.getElementById("err1").innerHTML=" ";
+        }
+    
+    
+    
+        
+    
+    }
+
+</script>
+</html>

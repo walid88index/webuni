@@ -1,0 +1,26 @@
+nav{display:flex;
+    flex-wrap:wrap;
+    margin: -7.613px;
+    min-height:110px ;
+ background-color:rgb(10, 172, 236);
+ position: fixed;
+ width:100%;
+ z-index:90;}
+
+nav figure{margin:0px auto auto 0px;
+    width:32%;
+    height:90px;}
+
+nav figure img{min-width:100px;
+     width:20%;
+     margin:4px 0px 0px 10px;
+    border-radius: 100%;}
+
+nav ul{display:flex;
+list-style:none; 
+margin:15px 25px 5px -25px;
+flex-wrap:wrap;}
+
+nav ul li{padding-right:20px;}
+
+nav a{text-decoration: none;color: rgb(221, 255, 0);}
